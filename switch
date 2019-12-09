@@ -1,0 +1,37 @@
+交换机配置telnet服务
+
+1、华为交换机的配置
+
+1）telnet的配置
+
+stelnet server enable
+telnet server enable
+
+aaa
+local-user admin password irreversible-cipher admin@huawei123
+local-user admin service-type ssh telnet
+local-user admin privilege level 15
+quit
+
+user-interface vty 0 4
+ authentication-mode aaa
+ protocol inbound all
+ idle-timeout 35791
+ 
+ rsa local-key-pair create
+ ssh user huawei authentication-type password admin@huawei123
+ ssh user huawei service-type stelnet
+ q
+ save
+ 
+ 
+2、Console 配置
+ 
+user-interface console 0
+authentication-mode aaa
+quit
+aaa
+local-user admin password irreversible-cipher admin@huawei123
+local-user admin service-type terminal
+return
+save
