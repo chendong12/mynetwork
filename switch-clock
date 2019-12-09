@@ -1,0 +1,6 @@
+配置交换机的时间
+H3C 交换机时间配置
+undo clock timezone
+用户视图>clock timezone beijing add 8
+交换机时间同步设置：
+管理视图]ntp-service unicast-server 120.25.108.11
