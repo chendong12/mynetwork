@@ -8,7 +8,7 @@ stelnet server enable
 telnet server enable
 
 aaa
-local-user admin password irreversible-cipher admin@huawei123
+local-user admin password irreversible-cipher your_admin_pass
 local-user admin service-type ssh telnet
 local-user admin privilege level 15
 quit
@@ -19,7 +19,7 @@ user-interface vty 0 4
  idle-timeout 35791
  
  rsa local-key-pair create
- ssh user huawei authentication-type password admin@huawei123
+ ssh user huawei authentication-type password your_admin_pass
  ssh user huawei service-type stelnet
  q
  save
@@ -31,7 +31,7 @@ user-interface console 0
 authentication-mode aaa
 quit
 aaa
-local-user admin password irreversible-cipher admin@huawei123
+local-user admin password irreversible-cipher your_admin_pass
 local-user admin service-type terminal
 return
 save
