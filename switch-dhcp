@@ -1,0 +1,11 @@
+H3C和华为交换机的DHCP 配置
+
+dhcp enable 
+dhcp server ip-pool vlan100
+ network 192.168.100.0 mask 255.255.255.0
+ gateway-list 192.168.100.254
+
+network 192.168.100.0 mask 255.255.255.0
+gateway-list 192.168.100.254
+ dhcp server forbidden-ip 192.168.100.1 192.168.100.120
+ dhcp server forbidden-ip 192.168.100.130 192.168.100.253
