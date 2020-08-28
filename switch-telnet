@@ -1,0 +1,18 @@
+#华为交换机配置 telnet 和 console 
+
+方法一：配置密码
+
+telnet server enable
+
+#console 不启用认证
+user-interface con 0
+ authentication-mode none
+
+user-interface vty 0 4
+ protocol inbound all
+ set authentication password cipher your_password
+ authentication-mode password
+
+
+方法二：配置用户名+密码认证
+
