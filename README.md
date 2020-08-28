@@ -5,11 +5,11 @@
 https://raw.githubusercontent.com/chendong12/mynetwork/master/switch-telnet
 
 # 2、VLAN 及 DHCP配置
-```shell
+
 https://raw.githubusercontent.com/chendong12/mynetwork/master/switch-dhcp
-```
+
  
 # 3、时钟配置
-```shell
+
 https://raw.githubusercontent.com/chendong12/mynetwork/master/switch-clock
-```
+
