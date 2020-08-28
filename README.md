@@ -2,14 +2,14 @@
 
 # 1、telnet的配置
 
-https://raw.githubusercontent.com/chendong12/mynetwork/master/switch-telnet
+https://github.com/chendong12/mynetwork/blob/master/switch-telnet
 
 # 2、VLAN 及 DHCP配置
 
-https://raw.githubusercontent.com/chendong12/mynetwork/master/switch-dhcp
+https://github.com/chendong12/mynetwork/blob/master/switch-vlan
 
  
 # 3、时钟配置
 
-https://raw.githubusercontent.com/chendong12/mynetwork/master/switch-clock
+https://github.com/chendong12/mynetwork/blob/master/switch-clock
 
