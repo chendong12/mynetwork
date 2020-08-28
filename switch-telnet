@@ -16,3 +16,21 @@ user-interface vty 0 4
 
 方法二：配置用户名+密码认证
 
+stelnet server enable
+telnet server enable
+
+aaa
+local-user admin password irreversible-cipher your_admin_pass
+local-user admin service-type ssh telnet terminal http
+local-user admin privilege level 15
+quit
+
+user-interface vty 0 4
+ authentication-mode aaa
+ protocol inbound all
+ idle-timeout 35791
+ 
+
+user-interface console 0
+authentication-mode aaa
+quit
