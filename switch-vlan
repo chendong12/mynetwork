@@ -1,0 +1,51 @@
+#创建 VLAN 10 20 30
+vlan 10
+exit
+vlan 20
+exit
+vlan 30
+exit
+
+#配置 VLAN IP地址
+
+int vlan10
+ip add 192.168.10.1 255.255.255.0
+
+int vlan20
+ip add 192.168.20.1 255.255.255.0
+
+int vlan30
+ip add 192.168.30.1 255.255.255.0
+
+
+#配置dhcp
+ip pool vlan10
+ gateway-list 192.168.10.1
+ network 192.168.10.0 mask 255.255.255.0
+ excluded-ip-address 192.168.10.10 192.168.10.200
+ dns-list 202.106.46.151 114.114.114.114
+
+
+
+ip pool vlan20
+ gateway-list 192.168.20.1
+ network 192.168.20.0 mask 255.255.255.0
+ excluded-ip-address 192.168.20.10 192.168.20.200
+ dns-list 202.106.46.151 114.114.114.114
+
+
+
+ip pool vlan30
+ gateway-list 192.168.30.1
+ network 192.168.30.0 mask 255.255.255.0
+ excluded-ip-address 192.168.30.10 192.168.30.200
+ dns-list 202.106.46.151 114.114.114.114
+
+int vlan 10
+dhcp select global
+int vlan 20
+dhcp select global
+int vlan 30
+dhcp select global
+
+
